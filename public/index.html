@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔐 Encryption Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Encryption Tool</h1>
+    <p class="subtitle">Powered by Node.js + Express + CryptoJS</p>
+
+    <label for="plaintext">Enter Plain Text / Ciphertext:</label>
+    <textarea id="plaintext" placeholder="Type your message here..."></textarea>
+
+    <label for="algorithm">Select Algorithm:</label>
+    <select id="algorithm">
+      <option value="">-- Select --</option>
+      <option value="caesar">Caesar Cipher</option>
+      <option value="aes">AES</option>
+      <option value="des">DES</option>
+      <option value="base64">Base64</option>
+      <option value="sha256">SHA-256 (Hash - one way)</option>
+    </select>
+
+    <label for="key">Key / Shift (required for AES, DES, Caesar):</label>
+    <input type="text" id="key" placeholder="Enter key or shift number" />
+
+    <div class="buttons">
+      <button id="encryptBtn">🔒 Encrypt</button>
+      <button id="decryptBtn">🔓 Decrypt</button>
+      <button id="copyBtn">📋 Copy Result</button>
+      <button id="clearBtn">🗑️ Clear</button>
+    </div>
+
+    <label for="output">Result:</label>
+    <textarea id="output" readonly placeholder="Result appears here..."></textarea>
+
+    <p id="message" class="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
